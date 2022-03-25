@@ -10,6 +10,7 @@ namespace Inheritance_Exercise___Employee
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
