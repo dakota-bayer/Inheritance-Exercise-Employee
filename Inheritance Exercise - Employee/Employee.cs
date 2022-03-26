@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Inheritance_Exercise___Employee
 {
-    class Employee
+    class Employee : Person
     {
-        public string Name { get; set; }
-        public Employee(string name)
+        public Employee(string name) :  base (name)
         {
-            this.Name = name;
+
         }
     }
 }

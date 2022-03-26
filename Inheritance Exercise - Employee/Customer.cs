@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Inheritance_Exercise___Employee
 {
-    class Person
+    class Customer : Person
     {
-        public string Name { get; set; }
+        public int CreditLimit { get; set; }
 
-        public Person(string name)
+        public Customer(int creditLimit, string name) : base(name)
         {
-            this.Name = name;
+            this.CreditLimit = creditLimit;
         }
     }
 }
