@@ -18,5 +18,10 @@ namespace Inheritance_Exercise___Employee
         {
             this.AnnualSalary = salary;
         }
+
+        public override decimal GrossPay()
+        {
+            return AnnualSalary / 52 * 2;
+        }
     }
 }

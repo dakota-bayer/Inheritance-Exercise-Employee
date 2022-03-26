@@ -27,5 +27,11 @@ namespace Inheritance_Exercise___Employee
             return minutesWorked / 60.0m;
         }
 
+        //Without the GrossPay method in each subclass of employee, we'll get an error since the subclass doesn't contain a method that was declared abstract in the superclass
+        public override decimal GrossPay()
+        {
+            return HoursWorked() * PayRate;
+        }
+
     }
 }

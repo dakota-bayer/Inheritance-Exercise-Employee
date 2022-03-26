@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inheritance_Exercise___Employee
 {
-    class Person
+    public class Person
     {
         public string Name { get; set; }
 

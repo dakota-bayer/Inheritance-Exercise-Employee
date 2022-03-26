@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Inheritance_Exercise___Employee
 {
-    class Employee : Person
+    abstract class Employee : Person
     {
-        public Employee(string name) :  base (name)
+        public Employee(string name) : base(name)
         {
-            //Going to make a change
         }
+        public abstract decimal GrossPay();
     }
 }
