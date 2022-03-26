@@ -29,7 +29,8 @@ namespace Inheritance_Exercise___Employee
             string n2 = salEmp2.Name;
             string n3 = hourlyEmp3.Name;
 
-            
+            Console.WriteLine(hours);
+            Console.ReadLine();
         }
     }
 }
