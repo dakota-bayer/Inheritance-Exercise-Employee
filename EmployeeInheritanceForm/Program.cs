@@ -39,7 +39,7 @@ namespace EmployeeInheritanceForm
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmployeeInheritanceForm());
+            Application.Run(new EmployeeInheritanceForm(employees)); //This is modified to call the EmployeeInheritanceForm constructor with the employees list as an argument
         }
     }
 }

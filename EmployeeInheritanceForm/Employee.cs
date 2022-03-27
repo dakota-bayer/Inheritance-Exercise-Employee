@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeInheritanceForm
 {
-    abstract class Employee : Person
+    public abstract class Employee : Person
     {
         public Employee(string name) : base(name)
         {
