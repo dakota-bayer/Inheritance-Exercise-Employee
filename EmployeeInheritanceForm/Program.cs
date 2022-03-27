@@ -1,34 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Inheritance_Exercise___Employee
+namespace EmployeeInheritanceForm
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            //Employee emp1 = new Employee("Spongebob");
-
-            //SalariedEmployee salEmp2 = new SalariedEmployee("Clark Kent", 45000);
-
-            //HourlyEmployee hourlyEmp3 = new HourlyEmployee("Batman", 40.0m);
-            //hourlyEmp3.AddTime(30);
-            //decimal hours = hourlyEmp3.HoursWorked();
-
-            //emp1.AddTime(60);
-            //decimal h2 = emp1.HoursWorked();
-            //salEmp2 = AddTime(90);
-            //decimal h3 = salEmp2.HoursWorked();
-            //These doesn't work beacuse you cannot call methods declared in a object's subclasses or an object's sibling classes
-
-            //But you can call methods in super classes (if they are declared public)
-            //string n1 = emp1.Name;
-            //string n2 = salEmp2.Name;
-            //string n3 = hourlyEmp3.Name;
-
             Random r = new Random();
             List<Employee> employees = new List<Employee>();
             string[] employeeNames = { "Superman", "Green Lantern", "Batman", "Spider Man", "Thor", "Hal Jordan", "Wonder Woman", "Captain America" };
@@ -37,7 +22,7 @@ namespace Inheritance_Exercise___Employee
             {
                 Employee emp = null;
 
-                if(name.Length > 7) //create hourly employee
+                if (name.Length > 7) //create hourly employee
                 {
                     decimal payRate = (decimal)r.NextDouble() * 20 + 10; //Random number between 10 and 30
                     HourlyEmployee hrlyEmp = new HourlyEmployee(name, payRate);
@@ -52,9 +37,9 @@ namespace Inheritance_Exercise___Employee
                 employees.Add(emp);
             }
 
-
-            //Console.WriteLine(hours);
-            Console.ReadLine();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new EmployeeInheritanceForm());
         }
     }
 }
