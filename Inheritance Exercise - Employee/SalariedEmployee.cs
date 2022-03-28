@@ -18,5 +18,10 @@ namespace Inheritance_Exercise___Employee
         {
             this.AnnualSalary = salary;
         }
+
+        public override double PaidOutMonthly()
+        {
+            return (double) AnnualSalary / 12.0;
+        }
     }
 }

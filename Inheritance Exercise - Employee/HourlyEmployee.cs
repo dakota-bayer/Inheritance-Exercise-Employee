@@ -27,5 +27,9 @@ namespace Inheritance_Exercise___Employee
             return minutesWorked / 60.0m;
         }
 
+        public override double PaidOutMonthly()
+        {
+            return (double) HoursWorked() * (double) PayRate;
+        }
     }
 }

@@ -29,7 +29,17 @@ namespace Inheritance_Exercise___Employee
             string n2 = salEmp2.Name;
             string n3 = hourlyEmp3.Name;
 
-            Console.WriteLine(hours);
+
+            PayRoll pr = new PayRoll();
+            pr.AddEmployee(emp1);
+            pr.AddEmployee(salEmp2);
+            pr.AddEmployee(hourlyEmp3);
+            //Even though these are subtypes of employee, it still works!
+
+            double totalPayroll = pr.TotalMonthlyPayroll();
+
+            Console.WriteLine("Total Payroll: {0:c}", totalPayroll);
+
             Console.ReadLine();
         }
     }

@@ -12,5 +12,13 @@ namespace Inheritance_Exercise___Employee
         {
             //Going to make a change
         }
+
+        public virtual double PaidOutMonthly()
+        {
+            //declaring as "virtual" allows you to override the method
+            double result = 0;
+
+            return result;
+        }
     }
 }
